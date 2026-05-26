@@ -1,65 +1,182 @@
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
+
+import HeroImage from "@/assets/images/hero-candle.png";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="relative min-h-screen overflow-hidden">
+
+      {/* Background Image */}
+      <div className="absolute inset-0">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src={HeroImage}
+          alt="Glow Beyond Candle"
+          fill
           priority
+          className="object-cover"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#2B2118]/30" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10">
+
+        <Navbar />
+
+        <section className="flex min-h-screen items-center px-6">
+
+          <div className="max-w-3xl text-[#F8F4EE]">
+
+            <p className="mb-6 text-sm tracking-[0.4em] text-[#E8DCCB]">
+              HANDCRAFTED LUXURY CANDLES
+            </p>
+
+            <h1 className="text-6xl font-light leading-tight tracking-[0.2em] md:text-8xl">
+              GLOW
+              <br />
+              BEYOND
+            </h1>
+
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#F3ECE3] md:text-xl">
+              Scents that inspire warmth, calm and imagination in every space.
+            </p>
+
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+
+              <button className="rounded-full bg-[#B89B7A] px-8 py-4 text-sm tracking-[0.2em] text-white transition hover:scale-105 hover:opacity-90">
+                EXPLORE COLLECTION
+              </button>
+
+              <button className="rounded-full border border-[#F8F4EE] px-8 py-4 text-sm tracking-[0.2em] text-white transition hover:bg-white hover:text-[#8B7355]">
+                OUR STORY
+              </button>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* Featured Collection */}
+        <section
+          id="collection"
+          className="relative z-10 bg-[#F8F4EE] px-6 py-32"
+        >
+          <div className="mx-auto max-w-7xl">
+
+            {/* Section Header */}
+            <div className="mb-20 text-center">
+
+              <p className="mb-4 text-sm tracking-[0.4em] text-[#A58C6D]">
+                OUR COLLECTION
+              </p>
+
+              <h2 className="text-5xl font-light tracking-[0.15em] text-[#8B7355]">
+                Crafted Scents
+              </h2>
+
+            </div>
+
+            {/* Product Grid */}
+            <div className="grid gap-10 md:grid-cols-3">
+
+              {/* Card 1 */}
+              <div className="group">
+
+                <div className="overflow-hidden rounded-4xl">
+
+                  <img
+                    src="/collection-1.png"
+                    alt="Vanilla Candle"
+                    className="h-112.5 w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+
+                </div>
+
+                <div className="mt-6">
+
+                  <h3 className="text-2xl font-light text-[#8B7355]">
+                    Vanilla Dreams
+                  </h3>
+
+                  <p className="mt-3 text-[#9C8668]">
+                    Warm vanilla with soft creamy notes.
+                  </p>
+
+                  <p className="mt-4 tracking-[0.2em] text-[#B89B7A]">
+                    $28 CAD
+                  </p>
+
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="group">
+
+                <div className="overflow-hidden rounded-4xl">
+
+                  <img
+                    src="/collection-2.png"
+                    alt="Lavender Candle"
+                    className="h-112.5 w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+
+                </div>
+
+                <div className="mt-6">
+
+                  <h3 className="text-2xl font-light text-[#8B7355]">
+                    Lavender Calm
+                  </h3>
+
+                  <p className="mt-3 text-[#9C8668]">
+                    Relaxing lavender crafted for peaceful evenings.
+                  </p>
+
+                  <p className="mt-4 tracking-[0.2em] text-[#B89B7A]">
+                    $30 CAD
+                  </p>
+
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="group">
+
+                <div className="overflow-hidden rounded-4xl">
+
+                  <img
+                    src="/collection-3.png"
+                    alt="Citrus Candle"
+                    className="h-112.5 w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+
+                </div>
+
+                <div className="mt-6">
+
+                  <h3 className="text-2xl font-light text-[#8B7355]">
+                    Citrus Glow
+                  </h3>
+
+                  <p className="mt-3 text-[#9C8668]">
+                    Bright citrus balanced with warm undertones.
+                  </p>
+
+                  <p className="mt-4 tracking-[0.2em] text-[#B89B7A]">
+                    $29 CAD
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }
