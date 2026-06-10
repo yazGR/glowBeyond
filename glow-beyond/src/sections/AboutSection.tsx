@@ -1,6 +1,11 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 import FadeIn from "@/components/FadeIn";
 
 export default function AboutSection() {
+  const t = useTranslations("about");
   return (
     <FadeIn>
       <section
@@ -26,28 +31,26 @@ export default function AboutSection() {
               <div>
 
                 <p className="mb-4 text-sm tracking-[0.4em] text-[#A58C6D]">
-                  ABOUT GLOW BEYOND
+                  {t("label")}
                 </p>
 
                 <h2 className="text-5xl font-light leading-tight tracking-[0.15em] text-[#8B7355]">
-                  Crafted to inspire warmth and calm
+                  {t("title")}
                 </h2>
 
                 <p className="mt-8 text-lg leading-relaxed text-[#9C8668]">
-                  Glow Beyond was created from a passion for creating comforting spaces
-                  through fragrance, warmth and minimalist beauty.
+                  {t("paragraph1")}
                 </p>
 
                 <p className="mt-6 text-lg leading-relaxed text-[#9C8668]">
-                  Each candle is carefully handcrafted to bring a sense of calm,
-                  imagination and luxury into everyday moments.
+                  {t("paragraph2")}
                 </p>
 
                 <a
                   href="#contact"
                   className="mt-10 inline-block rounded-full border border-[#B89B7A] px-8 py-4 text-sm tracking-[0.2em] text-[#8B7355] transition hover:bg-[#B89B7A] hover:text-white"
                 >
-                  LEARN MORE
+                  {t("button")}
                 </a>
 
               </div>

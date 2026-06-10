@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "collection": "Colección",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "Velas artesanales de lujo",
+    "description": "Aromas que inspiran calidez, tranquilidad e imaginación.",
+    "explore": "EXPLORAR COLECCIÓN",
+    "story": "NUESTRA HISTORIA"
+  },
+  "about": {
+    "label": "SOBRE GLOW BEYOND",
+    "title": "Creado para inspirar calidez y tranquilidad",
+    "paragraph1": "Glow Beyond nació de la pasión por crear espacios acogedores a través de fragancias, calidez y belleza minimalista.",
+    "paragraph2": "Cada vela está cuidadosamente elaborada a mano para aportar calma, imaginación y lujo a los momentos cotidianos.",
+    "button": "DESCUBRIR MÁS"
+  },
+   "footer": {
+    "navigation": "NAVEGACIÓN",
+    "contact": "CONTACTO",
+    "description": "Velas artesanales de lujo diseñadas para inspirar calidez, tranquilidad e imaginación en cada espacio.",
+    "collection": "Colección",
+    "about": "Nosotros",
+    "email": "Correo electrónico",
+    "instagram": "Instagram",
+    "rights": "© 2026 Glow Beyond. Todos los derechos reservados."
+  },
+  "collection": {
+    "label": "NUESTRA COLECCIÓN",
+    "title": "Aromas Artesanales"
+  }
+}

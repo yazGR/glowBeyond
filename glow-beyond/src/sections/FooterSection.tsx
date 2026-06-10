@@ -1,6 +1,10 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import FadeIn from "@/components/FadeIn";
 
 export default function FooterSection() {
+  const t = useTranslations("footer");
   return (
     <FadeIn>
       <footer
@@ -19,8 +23,7 @@ export default function FooterSection() {
                   </h3>
 
                   <p className="mt-6 max-w-sm leading-relaxed text-[#9C8668]">
-                    Handcrafted luxury candles designed to inspire warmth,
-                    calm and imagination in every space.
+                    {t("description")}
                   </p>
 
                 </div>
@@ -29,7 +32,7 @@ export default function FooterSection() {
                 <div>
 
                   <h4 className="mb-6 text-sm tracking-[0.3em] text-[#8B7355]">
-                    NAVIGATION
+                    {t("navigation")}
                   </h4>
 
                   <div className="flex flex-col gap-4 text-[#9C8668]">
@@ -38,14 +41,14 @@ export default function FooterSection() {
                       href="#collection"
                       className="transition hover:text-[#8B7355]"
                     >
-                      Collection
+                      {t("collection")}
                     </a>
 
                     <a
                       href="#about"
                       className="transition hover:text-[#8B7355]"
                     >
-                      About
+                      {t("about")}
                     </a>
 
                     <a
@@ -63,7 +66,7 @@ export default function FooterSection() {
                 <div>
 
                   <h4 className="mb-6 text-sm tracking-[0.3em] text-[#8B7355]">
-                    CONTACT
+                    {t("contact")}
                   </h4>
 
                   <div className="flex flex-col gap-4 text-[#9C8668]">
@@ -82,7 +85,7 @@ export default function FooterSection() {
                       target="_blank"
                       className="transition hover:text-[#8B7355]"
                     >
-                      Instagram
+                      {t("instagram")}
                     </a>
 
                   </div>
@@ -94,7 +97,7 @@ export default function FooterSection() {
               {/* Bottom */}
               <div className="mt-20 border-t border-[#CBB79C] pt-8 text-center text-sm text-[#9C8668]">
 
-                © 2026 Glow Beyond. All rights reserved.
+                {t("rights")}
 
               </div>
 

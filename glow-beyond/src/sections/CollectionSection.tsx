@@ -1,9 +1,13 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import FadeIn from "@/components/FadeIn";
 import ProductCard from "@/components/ProductCard";
 
 import { products } from "@/data/products";
 
 export default function CollectionSection() {
+    const t = useTranslations("collection");
   return (
     <FadeIn>
       <section
@@ -15,11 +19,11 @@ export default function CollectionSection() {
             <div className="mb-20 text-center">
 
             <p className="mb-4 text-sm tracking-[0.4em] text-[#A58C6D]">
-                OUR COLLECTION
+                {t("label")}
             </p>
 
             <h2 className="text-5xl font-light tracking-[0.15em] text-[#8B7355]">
-                Crafted Scents
+                {t("title")}
             </h2>
 
             </div>
