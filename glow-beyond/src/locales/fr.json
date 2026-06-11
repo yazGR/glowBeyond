@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "collection": "Collection",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Bougies artisanales de luxe",
+    "description": "Des parfums qui inspirent chaleur, calme et imagination.",
+    "explore": "DÉCOUVRIR LA COLLECTION",
+    "story": "NOTRE HISTOIRE"
+  },
+  "about": {
+    "label": "À PROPOS DE GLOW BEYOND",
+    "title": "Créé pour inspirer chaleur et sérénité",
+    "paragraph1": "Glow Beyond est né d'une passion pour créer des espaces réconfortants à travers les parfums, la chaleur et la beauté minimaliste.",
+    "paragraph2": "Chaque bougie est soigneusement fabriquée à la main pour apporter calme, imagination et luxe au quotidien.",
+    "button": "EN SAVOIR PLUS"
+  },
+  "footer": {
+    "navigation": "NAVIGATION",
+    "contact": "CONTACT",
+    "description": "Bougies artisanales de luxe conçues pour inspirer chaleur, calme et imagination dans chaque espace.",
+    "collection": "Collection",
+    "about": "À propos",
+    "email": "Courriel",
+    "instagram": "Instagram",
+    "rights": "© 2026 Glow Beyond. Tous droits réservés."
+  },
+   "collection": {
+    "label": "NOTRE COLLECTION",
+    "title": "Parfums Artisanaux"
+  }
+}
