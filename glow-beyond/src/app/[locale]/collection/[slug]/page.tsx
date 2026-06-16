@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 
+import ProductGallery from "@/components/ProductGallery";
+
 interface ProductPageProps {
   params: Promise<{
     locale: string;
@@ -33,10 +35,8 @@ export default async function ProductPage({
 
         <div className="grid gap-12 md:grid-cols-2">
 
-          <img
-            src={product.image}
-            alt={translation.name}
-            className="w-full rounded-4xl"
+          <ProductGallery
+            images={product.gallery}
           />
 
           <div>

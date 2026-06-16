@@ -29,14 +29,30 @@ export default function CollectionSection() {
             </div>
 
             {/* Product Grid */}
-           <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-                {products.map((product) => (
-                    <ProductCard
-                        key={product.id}
-                        product={product}
-                    />
-                ))}
+           <div
+              className="
+                flex
+                gap-8
+                overflow-x-auto
+                scroll-smooth
+                snap-x
+                snap-mandatory
+                pb-4
+              "
+            >
+              {products.map((product) => (
+                <div
+                  key={product.id}
+                  className="
+                    min-w-[85%]
+                    md:min-w-[48%]
+                    snap-center
+                  "
+                >
+                  <ProductCard product={product} />
                 </div>
+              ))}
+            </div>
         </div>
       </section>
     </FadeIn>
