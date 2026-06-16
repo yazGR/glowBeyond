@@ -30,5 +30,9 @@
   "collection": {
     "label": "NUESTRA COLECCIÓN",
     "title": "Aromas Artesanales"
+  },
+  "product": {
+    "notes": "Notas Aromáticas",
+    "benefits": "Beneficios"
   }
 }
