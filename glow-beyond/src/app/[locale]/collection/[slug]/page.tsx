@@ -49,6 +49,10 @@ export default async function ProductPage({
               {translation.description}
             </p>
 
+            <p className="mt-8 leading-relaxed text-[#9C8668]">
+              {translation.longDescription}
+            </p>
+
             <p className="mt-6 text-2xl text-[#B89B7A]">
               ${product.price} CAD
             </p>
