@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "products": "Productos",
+    "shop": "Tienda",
     "about": "Nosotros",
     "contact": "Contacto"
   },
@@ -39,5 +39,10 @@
   "cart": {
     "add": "Agregar al carrito",
     "added": "✓ Agregado al carrito"
+  },
+  "shop": {
+    "label": "TIENDA",
+    "title": "Nuestros Productos",
+    "description": "Descubre fragancias artesanales diseñadas para aportar calidez, confort e inspiración a tu vida diaria."
   }
 }

@@ -39,5 +39,10 @@
    "cart": {
     "add": "Ajouter au panier",
     "added": "✓ Ajouté au panier"
+  },
+  "shop": {
+    "label": "BOUTIQUE",
+    "title": "Nos Produits",
+    "description": "Découvrez des fragrances artisanales conçues pour apporter chaleur, confort et inspiration à votre quotidien."
   }
 }

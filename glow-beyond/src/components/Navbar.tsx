@@ -1,6 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 import { ShoppingBag } from "lucide-react";
@@ -8,6 +9,7 @@ import { useCart } from "@/context/CartContext";
 
 export default function Navbar() {
   const t = useTranslations("navbar");
+  const locale = useLocale() as "fr" | "en" | "es";
 
   const { totalItems } = useCart();
 
@@ -16,9 +18,12 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
         {/* Logo */}
-        <div className="text-xl tracking-[0.3em] text-[#8B7355]">
+        <Link
+          href={`/${locale}`}
+          className="text-xl tracking-[0.3em] text-[#8B7355]"
+        >
           GLOW BEYOND
-        </div>
+        </Link>
 
         {/* Right Side */}
         <div className="flex items-center gap-8">
@@ -26,26 +31,26 @@ export default function Navbar() {
           {/* Navigation */}
           <div className="hidden gap-8 text-sm tracking-[0.2em] text-[#8B7355] md:flex">
 
-            <a
-              href="#collection"
+            <Link
+              href={`/${locale}/shop`}
               className="transition hover:opacity-70"
             >
               {t("shop")}
-            </a>
+            </Link>
 
-            <a
-              href="#about"
+            <Link
+              href={`/${locale}/about`}
               className="transition hover:opacity-70"
             >
               {t("about")}
-            </a>
-
-            <a
-              href="#contact"
+            </Link>
+            
+            <Link
+              href={`/${locale}/contact`}
               className="transition hover:opacity-70"
             >
               {t("contact")}
-            </a>
+            </Link>
 
           </div>
 
@@ -67,8 +72,7 @@ export default function Navbar() {
             >
               <ShoppingBag size={22} />
 
-              {totalItems > 0 && (
-                <span
+              <span
                   className="
                     absolute
                     -right-2
@@ -86,7 +90,6 @@ export default function Navbar() {
                 >
                   {totalItems}
                 </span>
-              )}
             </button>
 
           </div>
