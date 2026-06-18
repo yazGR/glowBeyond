@@ -24,6 +24,10 @@ interface CartContextType {
 
   removeItem: (id: number) => void;
 
+  increaseQuantity: (id: number) => void;
+
+  decreaseQuantity: (id: number) => void;
+
   clearCart: () => void;
 
   totalItems: number;
@@ -78,6 +82,34 @@ export function CartProvider({
     });
   };
 
+  const increaseQuantity = (id: number) => {
+    setItems((prev) =>
+      prev.map((item) =>
+        item.id === id
+          ? {
+              ...item,
+              quantity: item.quantity + 1,
+            }
+          : item
+      )
+    );
+  };
+
+  const decreaseQuantity = (id: number) => {
+    setItems((prev) =>
+      prev
+        .map((item) =>
+          item.id === id
+            ? {
+                ...item,
+                quantity: item.quantity - 1,
+              }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
   const removeItem = (id: number) => {
     setItems((prev) =>
       prev.filter((item) => item.id !== id)
@@ -105,6 +137,8 @@ export function CartProvider({
         items,
         addItem,
         removeItem,
+        increaseQuantity,
+        decreaseQuantity,
         clearCart,
         totalItems,
         totalPrice,
