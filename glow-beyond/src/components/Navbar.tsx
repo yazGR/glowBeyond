@@ -3,13 +3,17 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useState } from "react";
 
 import { ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import CartDrawer from "./CartDrawer";
 
 export default function Navbar() {
   const t = useTranslations("navbar");
   const locale = useLocale() as "fr" | "en" | "es";
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const { totalItems } = useCart();
 
@@ -69,6 +73,7 @@ export default function Navbar() {
                 transition
                 hover:opacity-70
               "
+              onClick={() => setIsCartOpen(true)}
             >
               <ShoppingBag size={22} />
 
@@ -97,6 +102,10 @@ export default function Navbar() {
         </div>
 
       </nav>
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+      />
     </header>
   );
 }

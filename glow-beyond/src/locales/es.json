@@ -38,11 +38,24 @@
   },
   "cart": {
     "add": "Agregar al carrito",
-    "added": "✓ Agregado al carrito"
+    "added": "✓ Agregado al carrito",
+    "title": "Carrito",
+    "empty": "Tu carrito está vacío.",
+    "total": "Total",
+    "viewCart": "Ver carrito",
+    "checkout": "Pagar",
+    "quantity": "Cant."
   },
   "shop": {
     "label": "TIENDA",
     "title": "Nuestros Productos",
     "description": "Descubre fragancias artesanales diseñadas para aportar calidez, confort e inspiración a tu vida diaria."
+  },
+  "cartPage": {
+    "title": "Carrito",
+    "summary": "Resumen del pedido",
+    "continueShopping": "Seguir comprando",
+    "checkout": "Proceder al pago",
+    "empty": "Tu carrito está vacío."
   }
 }
