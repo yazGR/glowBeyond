@@ -3,8 +3,13 @@
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./LanguageSwitcher";
 
+import { ShoppingBag } from "lucide-react";
+import { useCart } from "@/context/CartContext";
+
 export default function Navbar() {
   const t = useTranslations("navbar");
+
+  const { totalItems } = useCart();
 
   return (
     <header className="fixed top-0 z-50 w-full bg-[#F8F4EE]/80 backdrop-blur-md">
@@ -25,7 +30,7 @@ export default function Navbar() {
               href="#collection"
               className="transition hover:opacity-70"
             >
-              {t("collection")}
+              {t("shop")}
             </a>
 
             <a
@@ -45,7 +50,46 @@ export default function Navbar() {
           </div>
 
           {/* Language Switcher */}
-          <LanguageSwitcher />
+          <div className="flex items-center gap-6">
+
+            <LanguageSwitcher />
+
+            <button
+              className="
+                relative
+                flex
+                items-center
+                justify-center
+                text-[#8B7355]
+                transition
+                hover:opacity-70
+              "
+            >
+              <ShoppingBag size={22} />
+
+              {totalItems > 0 && (
+                <span
+                  className="
+                    absolute
+                    -right-2
+                    -top-2
+                    flex
+                    h-5
+                    w-5
+                    items-center
+                    justify-center
+                    rounded-full
+                    bg-[#B89B7A]
+                    text-[10px]
+                    text-white
+                  "
+                >
+                  {totalItems}
+                </span>
+              )}
+            </button>
+
+          </div>
 
         </div>
 

@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "collection": "Collection",
+    "shop": "Shop",
     "about": "About",
     "contact": "Contact"
   },
@@ -32,7 +32,12 @@
     "title": "Crafted Scents"
   },
   "product": {
+    "about": "About this fragrance",
     "notes": "Fragrance Notes",
     "benefits": "Benefits"
+  },
+  "cart": {
+    "add": "Add to Cart",
+    "added": "✓ Added to Cart"
   }
 }

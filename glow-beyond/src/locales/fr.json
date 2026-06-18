@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "collection": "Collection",
+    "shop": "Boutique",
     "about": "À propos",
     "contact": "Contact"
   },
@@ -32,7 +32,12 @@
     "title": "Parfums Artisanaux"
   },
   "product": {
+    "about": "À propos de ce parfum",
     "notes": "Notes Olfactives",
     "benefits": "Bienfaits"
+  },
+   "cart": {
+    "add": "Ajouter au panier",
+    "added": "✓ Ajouté au panier"
   }
 }

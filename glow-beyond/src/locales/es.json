@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "collection": "Colección",
+    "products": "Productos",
     "about": "Nosotros",
     "contact": "Contacto"
   },
@@ -32,7 +32,12 @@
     "title": "Aromas Artesanales"
   },
   "product": {
+    "about": "Sobre esta fragancia",
     "notes": "Notas Aromáticas",
     "benefits": "Beneficios"
+  },
+  "cart": {
+    "add": "Agregar al carrito",
+    "added": "✓ Agregado al carrito"
   }
 }
