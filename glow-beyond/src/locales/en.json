@@ -39,5 +39,10 @@
   "cart": {
     "add": "Add to Cart",
     "added": "✓ Added to Cart"
+  },
+  "shop": {
+    "label": "SHOP",
+    "title": "Our Products",
+    "description": "Discover handcrafted fragrances designed to bring warmth, comfort and inspiration into your everyday life."
   }
 }
