@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 
 import { locales } from "@/i18n/routing";
+import { CartProvider } from "@/context/CartContext";
+import Navbar from "@/components/Navbar";
 
 interface LocaleLayoutProps {
   children: ReactNode;
@@ -30,7 +32,15 @@ export default async function LocaleLayout({
       locale={locale}
       messages={messages}
     >
-      {children}
+      <CartProvider>
+
+        <Navbar />
+
+        <main>
+          {children}
+        </main>
+
+      </CartProvider>
     </NextIntlClientProvider>
   );
 }
