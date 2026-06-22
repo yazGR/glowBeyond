@@ -8,14 +8,24 @@ import { useState } from "react";
 import { ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import CartDrawer from "./CartDrawer";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const t = useTranslations("navbar");
+  const router = useRouter();
   const locale = useLocale() as "fr" | "en" | "es";
 
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const { totalItems } = useCart();
+
+  const handleCartClick = () => {
+    if (window.innerWidth < 768) {
+      router.push(`/${locale}/cart`);
+    } else {
+      setIsCartOpen(true);
+    }
+  };
 
   return (
     <header className="fixed top-0 z-50 w-full bg-[#F8F4EE]/80 backdrop-blur-md">
@@ -48,7 +58,7 @@ export default function Navbar() {
             >
               {t("about")}
             </Link>
-            
+
             <Link
               href={`/${locale}/contact`}
               className="transition hover:opacity-70"
@@ -73,28 +83,28 @@ export default function Navbar() {
                 transition
                 hover:opacity-70
               "
-              onClick={() => setIsCartOpen(true)}
+              onClick={handleCartClick}
             >
               <ShoppingBag size={22} />
 
               <span
-                  className="
-                    absolute
-                    -right-2
-                    -top-2
-                    flex
-                    h-5
-                    w-5
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#B89B7A]
-                    text-[10px]
-                    text-white
-                  "
-                >
-                  {totalItems}
-                </span>
+                className="
+                  absolute
+                  -right-2
+                  -top-2
+                  flex
+                  h-5
+                  w-5
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#B89B7A]
+                  text-[10px]
+                  text-white
+                "
+              >
+                {totalItems}
+              </span>
             </button>
 
           </div>
@@ -102,10 +112,12 @@ export default function Navbar() {
         </div>
 
       </nav>
+
       <CartDrawer
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
       />
+
     </header>
   );
 }

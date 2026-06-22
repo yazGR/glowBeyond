@@ -3,7 +3,8 @@
 import { X, Trash2, } from "lucide-react";
 
 import { useCart } from "@/context/CartContext";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -23,6 +24,7 @@ export default function CartDrawer({
   } = useCart();
 
   const t = useTranslations("cart");
+  const locale = useLocale();
 
   return (
     <>
@@ -189,20 +191,25 @@ export default function CartDrawer({
 
             </div>
 
-            <button
-              className="
-                w-full
-                rounded-full
-                bg-[#8B7355]
-                py-4
-                text-white
-                transition
-                hover:bg-[#735E45]
-              "
-            >
-              {t("viewCart")}
-            </button>
-
+            <Link
+                href={`/${locale}/cart`}
+                onClick={onClose}
+                className="
+                    flex
+                    w-full
+                    items-center
+                    justify-center
+                    rounded-full
+                    bg-[#8B7355]
+                    py-4
+                    text-white
+                    transition
+                    hover:bg-[#735E45]
+                "
+                >
+                {t("viewCart")}
+            </Link>
+            
           </div>
 
         </div>

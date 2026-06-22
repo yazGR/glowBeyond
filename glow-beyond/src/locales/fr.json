@@ -56,6 +56,36 @@
     "summary": "Résumé de la commande",
     "continueShopping": "Continuer vos achats",
     "checkout": "Passer au paiement",
-    "empty": "Votre panier est vide."
+    "empty": "Votre panier est vide.",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "shippingCalculated": "Calculé au paiement",
+    "total": "Total"
+  },
+  "checkout": {
+    "title": "Paiement",
+    "customerInfo": "Informations du client",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Courriel",
+    "phone": "Téléphone",
+
+    "deliveryMethod": "Méthode de livraison",
+    "pickup": "Ramassage",
+    "shipping": "Livraison",
+
+    "shippingAddress": "Adresse de livraison",
+    "street": "Adresse",
+    "city": "Ville",
+    "province": "Province",
+    "postalCode": "Code postal",
+
+    "orderSummary": "Résumé de la commande",
+    "total": "Total",
+    "placeOrder": "Passer la commande",
+    "shippingCost": "Livraison",
+    "taxes": "Taxes",
+    "calculatedAtPayment": "Calculé au paiement",
+    "estimatedTotal": "Total estimé"
   }
 }

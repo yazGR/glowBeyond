@@ -56,6 +56,36 @@
     "summary": "Order Summary",
     "continueShopping": "Continue Shopping",
     "checkout": "Proceed to Checkout",
-    "empty": "Your cart is empty."
+    "empty": "Your cart is empty.",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingCalculated": "Calculated at checkout",
+    "total": "Total"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "customerInfo": "Customer Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+
+    "deliveryMethod": "Delivery Method",
+    "pickup": "Pickup",
+    "shipping": "Shipping",
+
+    "shippingAddress": "Shipping Address",
+    "street": "Street Address",
+    "city": "City",
+    "province": "Province",
+    "postalCode": "Postal Code",
+
+    "orderSummary": "Order Summary",
+    "total": "Total",
+    "placeOrder": "Place Order",
+    "shippingCost": "Shipping",
+    "taxes": "Taxes",
+    "calculatedAtPayment": "Calculated at payment",
+    "estimatedTotal": "Estimated Total"
   }
 }

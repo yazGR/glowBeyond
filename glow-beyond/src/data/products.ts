@@ -275,7 +275,7 @@ export const products: Product[] = [
     }
   },
   {
-    id: 3,
+    id: 4,
     slug: "lumen",
     image: "/collection-4.png",
     gallery: [
